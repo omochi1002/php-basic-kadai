@@ -11,33 +11,33 @@
         <?php
         function sort_2way ($array,$order) {
 
-          $nums = [15, 4, 18, 23, 10];
+          $nums = $array;
           
-
           if ($order) {
 
             echo '昇順にソートします。<br>';
-            sort ($nums);
-            foreach ($nums as $num) {
+            sort ($array);
+            foreach ($array as $num) {
             echo "{$num}<br>";
           }
 
           } else {
 
             echo '降順にソートします。<br>';
-            rsort($nums);
-            foreach ($nums as $num) {
+            rsort($array);
+            foreach ($array as $num) {
             echo "{$num}<br>";  
           }
 
         }
 
+
       }
 
-        
-        $nums = [15, 4, 18, 23, 10];
-        sort_2way ($nums,true) ;
-        sort_2way ($nums,false) ;
+      $nums = [15, 4, 18, 23, 10];
+
+      sort_2way ($nums,true) ;
+      sort_2way ($nums,false) ;
 
 
         ?>
@@ -45,3 +45,5 @@
 </body>
 
 </html>
+
+
